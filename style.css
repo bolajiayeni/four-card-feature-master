@@ -1,0 +1,174 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: sans-serif;
+    color: hsl(234, 12%, 34%);
+    background-color: hsl(0, 0%, 98%);
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+.header {
+    margin: 5rem auto 5rem auto;
+    text-align: center;
+    width: 35%;
+}
+
+.header__text-1 {
+    font-size: 2rem;
+    font-weight: 100;
+    margin-bottom: 1rem;
+}
+
+.header__text-2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.header__paragraph {
+    font-size: 1.6rem;
+    font-weight: 100;
+    margin-bottom: 1rem;
+}
+
+.item {
+    width: 65%;
+    margin: 0 auto 5rem auto;
+    padding: 3rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 3rem;
+
+}
+
+.supervisor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    border-radius: 5px;
+    border-top: 4px solid hsl(180, 62%, 55%);
+
+    padding: 3rem;
+    grid-row: 2 / span 2;
+
+    box-shadow: 0 2rem 3rem hsl(229, 6%, 90%);
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    border-radius: 5px;
+    border-top: 4px solid hsl(212, 86%, 64%);
+
+    padding: 3rem;
+    grid-row: 2 / span 2;
+    grid-column: 3 / -1;
+
+    box-shadow: 0 2rem 3rem hsl(229, 6%, 90%);
+}
+
+.teambuilder {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    border-radius: 5px;
+    border-top: 4px solid hsl(0, 78%, 62%);
+
+    padding: 3rem;
+    grid-row: 1 / span 2;
+    grid-column: 2 / 3;
+    
+    box-shadow: 0 2rem 3rem hsl(229, 6%, 90%);
+}
+
+.karma {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    border-radius: 5px;
+    border-top: 4px solid hsl(34, 97%, 64%);
+
+    padding: 3rem;
+    grid-row: 3 / span 2;
+    grid-column: 2 / 3;
+    
+    box-shadow: 0 2rem 3rem hsl(229, 6%, 90%);
+}
+
+.item__text-1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.item__text-2 {
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.item__icon {
+    align-self: flex-end;
+}
+
+@media only screen and (max-width: 87.5em) {
+    .item {
+        width: 90%;
+        margin: 0 auto 5rem auto;
+        padding: 3rem;
+    
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: 3rem;
+    
+    }
+}
+
+@media only screen and (max-width: 75em) {
+    .item {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-template-rows: auto;
+    }
+
+    .supervisor {
+        grid-row: auto;
+    }
+
+    .teambuilder {
+        grid-row: auto;
+        grid-column: auto;
+    }
+
+    .karma {
+        grid-row: auto;
+        grid-column: auto;
+    }
+
+    .calculator {
+        grid-row: auto;
+        grid-column: auto;
+    }
+}
+
+@media only screen and (max-width: 40.625em) {
+    .header {
+        width: 80%;
+    }
+}
